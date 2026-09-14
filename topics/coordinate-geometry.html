@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coordinate Geometry — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Geometry and Trigonometry</span>
+    <h1 class="topic-page-title">Coordinate Geometry</h1>
+
+    <p class="placeholder-note">
+      Length &amp; midpoint of a line segment, gradients, parallel/perpendicular lines, the equation of a
+      straight line, and the area of a rectilinear figure. See also
+      <a href="circles.html">Circles</a> for the coordinate geometry of circles.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 240 180">
+            <line x1="25" y1="155" x2="225" y2="155" class="core" stroke-width="1.5"></line>
+            <line x1="25" y1="155" x2="25" y2="20" class="core" stroke-width="1.5"></line>
+            <line x1="55" y1="125" x2="185" y2="55" class="stroke" stroke-width="2"></line>
+            <circle cx="55" cy="125" r="2.5" class="pt"></circle>
+            <circle cx="185" cy="55" r="2.5" class="pt"></circle>
+            <text x="10" y="168">O</text>
+            <text x="30" y="142">A(x&#8321;, y&#8321;)</text>
+            <text x="140" y="45">B(x&#8322;, y&#8322;)</text>
+          </svg>
+        </div>
+        <div class="formula-label">Length of a line segment</div>
+        <div class="formula-expr">$$AB = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$$</div>
+        <div class="formula-condition">Distance between $A(x_1,y_1)$ and $B(x_2,y_2)$, from Pythagoras' theorem.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Midpoint of a line segment</div>
+        <div class="formula-expr">$$\text{Midpoint of } AB = \left(\frac{x_1+x_2}{2}, \frac{y_1+y_2}{2}\right)$$</div>
+        <div class="formula-condition">The average of the $x$-coordinates, and the average of the $y$-coordinates.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 220 170">
+            <line x1="20" y1="150" x2="210" y2="150" class="core" stroke-width="1.5"></line>
+            <line x1="20" y1="150" x2="20" y2="20" class="core" stroke-width="1.5"></line>
+            <line x1="50" y1="120" x2="170" y2="120" class="core dash" stroke-width="1.5"></line>
+            <line x1="50" y1="120" x2="170" y2="50" class="stroke" stroke-width="2"></line>
+            <path d="M72,120 Q78,112 71.6,107.4" fill="none" class="core" stroke-width="1.5"></path>
+            <circle cx="50" cy="120" r="2.5" class="pt"></circle>
+            <circle cx="170" cy="50" r="2.5" class="pt"></circle>
+            <text x="78" y="117">&theta;</text>
+            <text x="25" y="140">A(x&#8321;, y&#8321;)</text>
+            <text x="140" y="42">B(x&#8322;, y&#8322;)</text>
+          </svg>
+        </div>
+        <div class="formula-label">Gradient of a line</div>
+        <div class="formula-expr">$$m_{AB} = \frac{y_2-y_1}{x_2-x_1} = \tan\theta$$</div>
+        <div class="formula-condition">$\theta$ is the angle the line makes with the positive $x$-axis direction.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Horizontal &amp; vertical lines</div>
+        <div class="formula-expr">$$\text{gradient of horizontal line} = 0 \qquad \text{gradient of vertical line} = \text{undefined}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Parallel lines</div>
+        <div class="formula-expr">$$l_1 \parallel l_2 \iff m_1 = m_2$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Perpendicular lines</div>
+        <div class="formula-expr">$$l_1 \perp l_2 \iff m_1 m_2 = -1$$</div>
+        <div class="formula-condition">Provided neither line is vertical.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Collinear points</div>
+        <div class="formula-expr">$$\text{gradient of } AB = \text{gradient of } BC = \text{gradient of } AC$$</div>
+        <div class="formula-condition">$A$, $B$, $C$ lie on the same straight line.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Perpendicular bisector</div>
+        <div class="formula-expr">$$\text{gradient} = -\frac{1}{m_{AB}}, \text{ passing through the midpoint of } AB$$</div>
+        <div class="formula-condition">The line perpendicular to $AB$ that passes through $AB$'s midpoint.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 200 170">
+            <line x1="25" y1="150" x2="195" y2="150" class="core" stroke-width="1.5"></line>
+            <line x1="25" y1="150" x2="25" y2="20" class="core" stroke-width="1.5"></line>
+            <line x1="25" y1="70" x2="165" y2="70" class="core dash" stroke-width="1.5"></line>
+            <line x1="140" y1="150" x2="140" y2="20" class="core dash" stroke-width="1.5"></line>
+            <circle cx="140" cy="70" r="2.5" class="pt"></circle>
+            <text x="30" y="64">y=b</text>
+            <text x="144" y="32">x=a</text>
+            <text x="146" y="65">(a, b)</text>
+          </svg>
+        </div>
+        <div class="formula-label">Equation of horizontal / vertical lines</div>
+        <div class="formula-expr">$$y = b \qquad x = a$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 200 170">
+            <line x1="25" y1="150" x2="195" y2="150" class="core" stroke-width="1.5"></line>
+            <line x1="25" y1="150" x2="25" y2="20" class="core" stroke-width="1.5"></line>
+            <line x1="25" y1="110" x2="160" y2="45" class="stroke" stroke-width="2"></line>
+            <circle cx="25" cy="110" r="2.5" class="pt"></circle>
+            <circle cx="90" cy="78" r="2.5" class="pt"></circle>
+            <circle cx="160" cy="45" r="2.5" class="pt"></circle>
+            <text x="-18" y="118">C(0, c)</text>
+            <text x="92" y="72">A(x&#8321;, y&#8321;)</text>
+            <text x="165" y="40">P(x, y)</text>
+          </svg>
+        </div>
+        <div class="formula-label">Equation of a non-vertical line</div>
+        <div class="formula-expr">$$y = mx+c \qquad \text{or} \qquad y-y_1 = m(x-x_1)$$</div>
+        <div class="formula-condition">$c$ is the $y$-intercept; $(x_1,y_1)$ is any known point on the line.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 200 170">
+            <line x1="20" y1="150" x2="190" y2="150" class="core" stroke-width="1.5"></line>
+            <line x1="20" y1="150" x2="20" y2="20" class="core" stroke-width="1.5"></line>
+            <polygon points="110,30 45,100 170,150" fill="none" class="stroke" stroke-width="2"></polygon>
+            <circle cx="110" cy="30" r="2.5" class="pt"></circle>
+            <circle cx="45" cy="100" r="2.5" class="pt"></circle>
+            <circle cx="170" cy="150" r="2.5" class="pt"></circle>
+            <text x="114" y="24">A(x&#8321;, y&#8321;)</text>
+            <text x="4" y="94">B(x&#8322;, y&#8322;)</text>
+            <text x="172" y="146">C(x&#8323;, y&#8323;)</text>
+          </svg>
+        </div>
+        <div class="formula-label">Area of a triangle</div>
+        <div class="formula-expr">$$\text{Area of } \triangle ABC = \frac{1}{2}\begin{vmatrix} x_1 & x_2 & x_3 & x_1 \\ y_1 & y_2 & y_3 & y_1 \end{vmatrix}$$</div>
+        <div class="formula-condition">"Shoelace" pattern: sum the down-diagonal products, subtract the up-diagonal products, take half the absolute value. Vertices listed anticlockwise.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Area of an n-sided polygon</div>
+        <div class="formula-expr">$$\text{Area} = \frac{1}{2}\begin{vmatrix} x_1 & x_2 & \cdots & x_n & x_1 \\ y_1 & y_2 & \cdots & y_n & y_1 \end{vmatrix}$$</div>
+        <div class="formula-condition">Same shoelace pattern extended to $n$ vertices, listed in order (anticlockwise) around the polygon.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>Finding the equation of a non-vertical line</h3>
+      <ol>
+        <li>Find the gradient, $m$, of the line.</li>
+        <li>Identify the coordinates of a point, $(x_1,y_1)$, that lies on the line.</li>
+        <li>Substitute $m$, $x_1$ and $y_1$ into $y-y_1=m(x-x_1)$ — or into $y=mx+c$ to solve for $c$ (the $y$-intercept).</li>
+      </ol>
+
+      <h3>Working the shoelace formula</h3>
+      <p>Write the $x$-coordinates on top and $y$-coordinates below, repeating the first column at the end. Multiply diagonally
+      down-right and add them up; multiply diagonally down-left and add them up; subtract the second sum from the first, then
+      take half the absolute value.</p>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Find the area of the triangle with vertices $A(1,2)$, $B(4,6)$, $C(6,1)$.</p>
+        <p>$$\text{Area} = \frac{1}{2}\left|\,(1\times6 + 4\times1 + 6\times2) - (2\times4 + 6\times6 + 1\times1)\,\right|$$</p>
+        <p>$$= \frac{1}{2}\left|\,(6+4+12) - (8+36+1)\,\right| = \frac{1}{2}|22-45| = \frac{23}{2} = 11.5 \text{ units}^2$$</p>
+      </div>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> If your shoelace calculation gives a negative value before taking the absolute value, the
+        vertices were listed clockwise instead of anticlockwise — the area itself is still correct once you take $|\,\cdot\,|$.
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

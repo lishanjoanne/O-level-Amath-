@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Differentiation Techniques — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Calculus</span>
+    <h1 class="topic-page-title">Differentiation Techniques</h1>
+
+    <p class="placeholder-note">
+      Covers all standard syllabus formulas plus the rule-by-rule "steps" from your own notes.
+      Send over worked examples or common student mistakes and they'll be added in.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-label">Power rule</div>
+        <div class="formula-expr">$$\frac{d}{dx}(x^n) = nx^{n-1}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Sum / difference rule</div>
+        <div class="formula-expr">$$\frac{d}{dx}\big(f(x) \pm g(x)\big) = f'(x) \pm g'(x)$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Chain rule</div>
+        <div class="formula-expr">$$\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}$$</div>
+        <div class="formula-condition">Used for composite functions, e.g. $y = (3x+1)^5$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Chain rule — power form</div>
+        <div class="formula-expr">$$\frac{d}{dx}\big[f(x)\big]^n = n\big[f(x)\big]^{n-1} \cdot f'(x)$$</div>
+        <div class="formula-condition">Bring down the power &rarr; reduce the power by 1 &rarr; multiply by the derivative of "the inside".</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Product rule</div>
+        <div class="formula-expr">$$\frac{d}{dx}(uv) = u\frac{dv}{dx} + v\frac{du}{dx}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Quotient rule</div>
+        <div class="formula-expr">$$\frac{d}{dx}\left(\frac{u}{v}\right) = \frac{v\frac{du}{dx} - u\frac{dv}{dx}}{v^2}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Exponential functions</div>
+        <div class="formula-expr">$$\frac{d}{dx}(e^x) = e^x \qquad \frac{d}{dx}(e^{f(x)}) = f'(x)\,e^{f(x)}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Logarithmic functions</div>
+        <div class="formula-expr">$$\frac{d}{dx}(\ln x) = \frac{1}{x} \qquad \frac{d}{dx}\big(\ln f(x)\big) = \frac{f'(x)}{f(x)}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Trigonometric functions</div>
+        <div class="formula-expr">$$\frac{d}{dx}(\sin x) = \cos x \qquad \frac{d}{dx}(\cos x) = -\sin x \qquad \frac{d}{dx}(\tan x) = \sec^2 x$$</div>
+        <div class="formula-condition">$x$ measured in radians.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Trig functions with chain rule</div>
+        <div class="formula-expr">$$\frac{d}{dx}\sin f(x) = f'(x)\cos f(x) \qquad \frac{d}{dx}\cos f(x) = -f'(x)\sin f(x) \qquad \frac{d}{dx}\tan f(x) = f'(x)\sec^2 f(x)$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Trig functions with linear argument</div>
+        <div class="formula-expr">$$\frac{d}{dx}\sin(ax+b) = a\cos(ax+b) \qquad \frac{d}{dx}\cos(ax+b) = -a\sin(ax+b) \qquad \frac{d}{dx}\tan(ax+b) = a\sec^2(ax+b)$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Powers of trig functions</div>
+        <div class="formula-expr">$$\frac{d}{dx}(\sin^n x) = n\sin^{n-1}x\cos x \qquad \frac{d}{dx}(\cos^n x) = -n\cos^{n-1}x\sin x \qquad \frac{d}{dx}(\tan^n x) = n\tan^{n-1}x\sec^2 x$$</div>
+        <div class="formula-condition">Chain rule form: $\dfrac{d}{dx}\big[\sin^n f(x)\big] = n\sin^{n-1}f(x) \cdot \dfrac{d}{dx}\big[\sin f(x)\big]$, and similarly for $\cos^n f(x)$, $\tan^n f(x)$.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+      <h3>Choosing the right rule</h3>
+      <ul>
+        <li>One function "inside" another (e.g. $(2x+3)^4$, $\sin(3x)$, $e^{5x}$) &rarr; chain rule.</li>
+        <li>Two functions multiplied together (e.g. $x^2 \sin x$) &rarr; product rule.</li>
+        <li>One function divided by another (e.g. $\frac{x}{\cos x}$) &rarr; quotient rule.</li>
+        <li>Rules often combine — e.g. product rule where one factor itself needs the chain rule.</li>
+      </ul>
+
+      <h3>Remembering the rules, step by step</h3>
+      <ul>
+        <li><strong>Chain rule (power form):</strong> Step 1 — bring down the power. Step 2 — reduce the power by 1. Step 3 — differentiate "the inside".</li>
+        <li><strong>Product rule:</strong> Step 1 — copy the first term, multiply by the derivative of the second. Step 2 — copy the second term, multiply by the derivative of the first. Step 3 — add the two.</li>
+        <li><strong>Quotient rule:</strong> Step 1 — square the denominator. Step 2 — copy the denominator, multiply by the derivative of the numerator. Step 3 — copy the numerator, multiply by the derivative of the denominator. Step 4 — subtract Step 3's term from Step 2's to form the numerator.</li>
+      </ul>
+
+      <h3>Applications</h3>
+      <ul>
+        <li><strong>Tangents &amp; normals:</strong> gradient of tangent $= \frac{dy}{dx}$ at that point; gradient of normal $= -1 \div \frac{dy}{dx}$.</li>
+        <li><strong>Stationary points:</strong> solve $\frac{dy}{dx} = 0$; use the second derivative or a sign table to classify as max/min.</li>
+        <li><strong>Rates of change:</strong> connect two rates with the chain rule, e.g. $\frac{dV}{dt} = \frac{dV}{dr} \cdot \frac{dr}{dt}$.</li>
+      </ul>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> Always simplify/factorise $\frac{dy}{dx}$ before solving for stationary points —
+        an unfactorised expression makes it easy to lose solutions.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

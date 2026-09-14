@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circle Properties — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Geometry and Trigonometry</span>
+    <h1 class="topic-page-title">Circle Properties</h1>
+
+    <p class="placeholder-note">
+      A-Math's Plane Geometry topic leans on E-Math circle theorems, so both are collected here:
+      all 8 E-Math circle properties, plus the 2 that A-Math actually tests (tangent&ndash;chord
+      theorem and the midpoint theorem). Originally built as its own site at
+      <a href="https://circleproperties.vercel.app/" target="_blank" rel="noopener">circleproperties.vercel.app</a>.
+    </p>
+
+    <h2 class="section-heading">E-Math &mdash; Geometrical Properties of Circles</h2>
+    <div class="property-grid">
+
+      <div class="property-card emath">
+        <span class="subject-badge emath">Symmetric Property 1</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 200">
+            <circle cx="130" cy="100" r="80" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="67.6" y1="150" x2="192.4" y2="150" class="stroke" stroke-width="2"></line>
+            <line x1="130" y1="100" x2="130" y2="150" class="core dash" stroke-width="1.5"></line>
+            <path d="M130,140 L120,140 L120,150" fill="none" class="core" stroke-width="1.5"></path>
+            <circle cx="130" cy="100" r="2.5" class="pt"></circle>
+            <circle cx="67.6" cy="150" r="2.5" class="pt"></circle>
+            <circle cx="192.4" cy="150" r="2.5" class="pt"></circle>
+            <circle cx="130" cy="150" r="2.5" class="pt"></circle>
+            <text x="136" y="98">O</text>
+            <text x="54" y="164">A</text>
+            <text x="198" y="164">B</text>
+            <text x="133" y="166">M</text>
+          </svg>
+        </div>
+        <h3>Perpendicular bisector of a chord</h3>
+        <p>A line from the centre, drawn perpendicular to a chord, bisects that chord &mdash; and the converse holds too: the perpendicular bisector of any chord always passes through the centre.</p>
+        <span class="proof-phrase">(&perp; bisector of chord)</span>
+      </div>
+
+      <div class="property-card emath">
+        <span class="subject-badge emath">Symmetric Property 2</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 200">
+            <circle cx="130" cy="100" r="80" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="67.6" y1="50" x2="192.4" y2="50" class="stroke" stroke-width="2"></line>
+            <line x1="67.6" y1="150" x2="192.4" y2="150" class="stroke" stroke-width="2"></line>
+            <line x1="130" y1="100" x2="130" y2="50" class="core dash" stroke-width="1.5"></line>
+            <line x1="130" y1="100" x2="130" y2="150" class="core dash" stroke-width="1.5"></line>
+            <line x1="124" y1="75" x2="136" y2="75" class="core" stroke-width="1.5"></line>
+            <line x1="124" y1="125" x2="136" y2="125" class="core" stroke-width="1.5"></line>
+            <circle cx="130" cy="100" r="2.5" class="pt"></circle>
+            <text x="136" y="98">O</text>
+            <text x="54" y="46">A</text>
+            <text x="198" y="46">B</text>
+            <text x="54" y="164">P</text>
+            <text x="198" y="164">Q</text>
+          </svg>
+        </div>
+        <h3>Equal chords, equal distance</h3>
+        <p>Equal chords sit the same distance from the centre; chords equidistant from the centre are equal in length. Works both ways &mdash; length tells you distance, distance tells you length.</p>
+        <span class="proof-phrase">(equal chords, equidistant from centre)</span>
+      </div>
+
+      <div class="property-card emath">
+        <span class="subject-badge emath">Symmetric Property 3</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 200">
+            <circle cx="130" cy="100" r="80" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="40" y1="180" x2="220" y2="180" class="stroke" stroke-width="2"></line>
+            <line x1="130" y1="100" x2="130" y2="180" class="core dash" stroke-width="1.5"></line>
+            <path d="M130,170 L140,170 L140,180" fill="none" class="core" stroke-width="1.5"></path>
+            <circle cx="130" cy="100" r="2.5" class="pt"></circle>
+            <circle cx="130" cy="180" r="2.5" class="pt"></circle>
+            <text x="136" y="98">O</text>
+            <text x="133" y="196">A</text>
+            <text x="24" y="176">P</text>
+            <text x="226" y="176">Q</text>
+          </svg>
+        </div>
+        <h3>Tangent perpendicular to radius</h3>
+        <p>A tangent meets the circle at exactly one point, and at that point of contact it is always perpendicular to the radius.</p>
+        <span class="proof-phrase">(tan &perp; rad)</span>
+      </div>
+
+      <div class="property-card emath">
+        <span class="subject-badge emath">Symmetric Property 4</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 200">
+            <circle cx="130" cy="100" r="80" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="20" y1="100" x2="71.8" y2="45.1" class="stroke" stroke-width="2"></line>
+            <line x1="20" y1="100" x2="71.8" y2="154.9" class="stroke" stroke-width="2"></line>
+            <line x1="130" y1="100" x2="71.8" y2="45.1" class="core dash" stroke-width="1.5"></line>
+            <line x1="130" y1="100" x2="71.8" y2="154.9" class="core dash" stroke-width="1.5"></line>
+            <line x1="20" y1="100" x2="130" y2="100" class="core dash" stroke-width="1.5"></line>
+            <path d="M79.1,51.9 L72.2,59.2 L65,52.3" fill="none" class="core" stroke-width="1.5"></path>
+            <path d="M79.1,148 L72.2,140.7 L65,147.6" fill="none" class="core" stroke-width="1.5"></path>
+            <circle cx="130" cy="100" r="2.5" class="pt"></circle>
+            <circle cx="20" cy="100" r="2.5" class="pt"></circle>
+            <circle cx="71.8" cy="45.1" r="2.5" class="pt"></circle>
+            <circle cx="71.8" cy="154.9" r="2.5" class="pt"></circle>
+            <text x="136" y="98">O</text>
+            <text x="6" y="96">P</text>
+            <text x="72" y="36">A</text>
+            <text x="72" y="172">B</text>
+          </svg>
+        </div>
+        <h3>Tangents from an external point</h3>
+        <p>The two tangents drawn to a circle from any point outside it are always equal in length &mdash; and OP bisects the angle between them.</p>
+        <span class="proof-phrase">(tangents from ext. pt.)</span>
+      </div>
+
+      <div class="property-card emath">
+        <span class="subject-badge emath">Angle Property 1</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 220">
+            <circle cx="130" cy="120" r="80" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="130" y1="120" x2="73.4" y2="176.6" class="stroke" stroke-width="2"></line>
+            <line x1="130" y1="120" x2="186.6" y2="176.6" class="stroke" stroke-width="2"></line>
+            <line x1="130" y1="40" x2="73.4" y2="176.6" class="core" stroke-width="1.5"></line>
+            <line x1="130" y1="40" x2="186.6" y2="176.6" class="core" stroke-width="1.5"></line>
+            <path d="M117.3,132.7 Q130,136.5 142.7,132.7" fill="none" class="stroke" stroke-width="1.5"></path>
+            <path d="M123.1,56.6 Q130,61.6 136.9,56.6" fill="none" class="core" stroke-width="1.5"></path>
+            <circle cx="130" cy="120" r="2.5" class="pt"></circle>
+            <text x="136" y="118">O</text>
+            <text x="126" y="150">2&theta;</text>
+            <text x="124" y="52">&theta;</text>
+            <text x="134" y="34">P</text>
+            <text x="55" y="188">A</text>
+            <text x="190" y="188">B</text>
+          </svg>
+        </div>
+        <h3>Angle at centre = 2 &times; angle at circumference</h3>
+        <p>An angle formed at the centre by a chord is always exactly double the angle the same chord forms at the circumference, on the major arc.</p>
+        <span class="proof-phrase">(&ang; at centre = 2&ang; at circumference)</span>
+      </div>
+
+      <div class="property-card emath">
+        <span class="subject-badge emath">Angle Property 2</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 220">
+            <circle cx="130" cy="120" r="80" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="50" y1="120" x2="210" y2="120" class="core dash" stroke-width="1.5"></line>
+            <line x1="50" y1="120" x2="186.6" y2="63.4" class="stroke" stroke-width="2"></line>
+            <line x1="210" y1="120" x2="186.6" y2="63.4" class="stroke" stroke-width="2"></line>
+            <path d="M177.4,67.2 L181.2,76.5 L190.4,72.6" fill="none" class="core" stroke-width="1.5"></path>
+            <circle cx="130" cy="120" r="2.5" class="pt"></circle>
+            <text x="136" y="118">O</text>
+            <text x="36" y="130">A</text>
+            <text x="216" y="130">B</text>
+            <text x="190" y="56">P</text>
+          </svg>
+        </div>
+        <h3>Right angle in a semicircle</h3>
+        <p>When a chord is a diameter, any angle it subtends at the circumference &mdash; from either arc &mdash; is exactly 90&deg;.</p>
+        <span class="proof-phrase">(rt. &ang; in semicircle)</span>
+      </div>
+
+      <div class="property-card emath">
+        <span class="subject-badge emath">Angle Property 3</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 220">
+            <circle cx="130" cy="120" r="80" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="73.4" y1="176.6" x2="186.6" y2="176.6" class="core dash" stroke-width="1.5"></line>
+            <line x1="73.4" y1="176.6" x2="130" y2="40" class="stroke" stroke-width="2"></line>
+            <line x1="186.6" y1="176.6" x2="130" y2="40" class="stroke" stroke-width="2"></line>
+            <line x1="73.4" y1="176.6" x2="186.6" y2="63.4" class="stroke" stroke-width="2"></line>
+            <line x1="186.6" y1="176.6" x2="186.6" y2="63.4" class="stroke" stroke-width="2"></line>
+            <path d="M123.1,56.6 Q130,61.6 136.9,56.6" fill="none" class="core" stroke-width="1.5"></path>
+            <path d="M173.9,76.1 Q178.4,83.4 186.6,81.4" fill="none" class="core" stroke-width="1.5"></path>
+            <text x="124" y="52">&theta;</text>
+            <text x="163" y="76">&theta;</text>
+            <text x="134" y="34">P</text>
+            <text x="192" y="60">Q</text>
+            <text x="55" y="188">A</text>
+            <text x="190" y="192">B</text>
+          </svg>
+        </div>
+        <h3>Angles in the same segment</h3>
+        <p>Any two angles subtended by the same chord, from points on the same arc, are equal &mdash; P and Q can slide anywhere along that arc and the angle stays the same.</p>
+        <span class="proof-phrase">(&ang;s in same segment)</span>
+      </div>
+
+      <div class="property-card emath">
+        <span class="subject-badge emath">Angle Property 4</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 220">
+            <circle cx="130" cy="120" r="80" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="130" y1="40" x2="210" y2="120" class="stroke" stroke-width="2"></line>
+            <line x1="210" y1="120" x2="130" y2="200" class="stroke" stroke-width="2"></line>
+            <line x1="130" y1="200" x2="50" y2="120" class="stroke" stroke-width="2"></line>
+            <line x1="50" y1="120" x2="130" y2="40" class="stroke" stroke-width="2"></line>
+            <path d="M117.3,52.7 Q130,69.2 142.7,52.7" fill="none" class="core" stroke-width="1.5"></path>
+            <path d="M142.7,187.3 Q130,170.8 117.3,187.3" fill="none" class="core" stroke-width="1.5"></path>
+            <text x="126" y="65">a</text>
+            <text x="124" y="182">c</text>
+            <text x="134" y="34">A</text>
+            <text x="216" y="122">B</text>
+            <text x="128" y="216">C</text>
+            <text x="34" y="122">D</text>
+          </svg>
+        </div>
+        <h3>Opposite angles of a cyclic quadrilateral</h3>
+        <p>In a quadrilateral inscribed in a circle, opposite angles always add up to 180&deg; &mdash; a + c = 180&deg; and b + d = 180&deg;.</p>
+        <span class="proof-phrase">(&ang;s in opp. segments are supp.)</span>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">A-Math &mdash; Plane Geometry</h2>
+    <div class="property-grid">
+
+      <div class="property-card amath">
+        <span class="subject-badge amath">Tangent&ndash;Chord Theorem</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 220">
+            <circle cx="130" cy="120" r="80" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="30" y1="200" x2="230" y2="200" class="stroke" stroke-width="2"></line>
+            <line x1="73.4" y1="63.4" x2="130" y2="200" class="core" stroke-width="1.5"></line>
+            <line x1="73.4" y1="63.4" x2="210" y2="120" class="core" stroke-width="1.5"></line>
+            <line x1="130" y1="200" x2="210" y2="120" class="stroke" stroke-width="2"></line>
+            <path d="M80.3,80 Q88.7,78.7 90,70.3" fill="none" class="core" stroke-width="1.5"></path>
+            <path d="M142.7,187.3 Q150,191.8 148,200" fill="none" class="core" stroke-width="1.5"></path>
+            <circle cx="130" cy="200" r="2.5" class="pt"></circle>
+            <text x="96" y="82">&theta;</text>
+            <text x="146" y="188">&theta;</text>
+            <text x="58" y="58">P</text>
+            <text x="216" y="116">B</text>
+            <text x="118" y="216">A</text>
+            <text x="236" y="204">T</text>
+          </svg>
+        </div>
+        <h3>Alternate Segment Theorem</h3>
+        <p>The angle between a tangent and a chord, taken at the point of contact, equals the angle the chord subtends in the alternate segment: &ang;APB = &ang;BAT.</p>
+        <span class="proof-phrase">(tan-chord &ang;)</span>
+      </div>
+
+      <div class="property-card amath">
+        <span class="subject-badge amath">Plane Geometry &mdash; Triangles</span>
+        <div class="diagram">
+          <svg viewBox="0 0 260 220">
+            <line x1="130" y1="40" x2="50" y2="200" class="core" stroke-width="1.5"></line>
+            <line x1="130" y1="40" x2="210" y2="200" class="core" stroke-width="1.5"></line>
+            <line x1="50" y1="200" x2="210" y2="200" class="stroke" stroke-width="2"></line>
+            <line x1="90" y1="120" x2="170" y2="120" class="stroke" stroke-width="2"></line>
+            <path d="M180,197 L184,200 L180,203" fill="none" class="stroke" stroke-width="1.5"></path>
+            <path d="M160,117 L164,120 L160,123" fill="none" class="stroke" stroke-width="1.5"></path>
+            <line x1="106" y1="76" x2="112" y2="82" class="core" stroke-width="1.5"></line>
+            <line x1="72" y1="158" x2="78" y2="164" class="core" stroke-width="1.5"></line>
+            <line x1="152" y1="76" x2="158" y2="82" class="core" stroke-width="1.5"></line>
+            <line x1="186" y1="158" x2="192" y2="164" class="core" stroke-width="1.5"></line>
+            <circle cx="130" cy="40" r="2.5" class="pt"></circle>
+            <circle cx="90" cy="120" r="2.5" class="pt"></circle>
+            <circle cx="170" cy="120" r="2.5" class="pt"></circle>
+            <text x="134" y="34">A</text>
+            <text x="36" y="216">B</text>
+            <text x="216" y="216">C</text>
+            <text x="76" y="112">D</text>
+            <text x="176" y="112">E</text>
+          </svg>
+        </div>
+        <h3>Midpoint Theorem</h3>
+        <p>Not a circle property &mdash; included here because it turns up alongside the tangent-chord theorem in Plane Geometry questions. If D and E are the midpoints of AB and AC, then DE is parallel to BC, and DE = &frac12;BC.</p>
+        <span class="proof-phrase">(mid-pt theorem)</span>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+      <h3>Why only two circle properties show up in A-Math</h3>
+      <p>The rest of the circle theorems (perpendicular bisector, equal chords, angle at centre, angles in the same segment, cyclic quadrilaterals...) belong to the E-Math syllabus. A-Math's Plane Geometry topic only draws on the tangent&ndash;chord theorem, paired here with the midpoint theorem since both get tested in the same question type.</p>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> Even though only the tangent&ndash;chord theorem is examinable directly in A-Math,
+        Plane Geometry questions often route through an E-Math circle property first (e.g. spotting a right angle
+        in a semicircle, or an isosceles triangle from two radii) before the tangent&ndash;chord step becomes visible.
+        Know all 8 E-Math properties cold.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

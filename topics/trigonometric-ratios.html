@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trigonometric Ratios — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Geometry and Trigonometry</span>
+    <h1 class="topic-page-title">Trigonometric Ratios</h1>
+
+    <p class="placeholder-note">
+      Special angle values, the CAST rule for general angles, and the key identities (negative angle,
+      complementary angle, reciprocal ratios). See also <a href="trigonometric-graphs.html">Trigonometric Graphs</a>.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-label">Reciprocal ratios</div>
+        <div class="formula-expr">$$\csc\theta = \frac{1}{\sin\theta} \qquad \sec\theta = \frac{1}{\cos\theta} \qquad \cot\theta = \frac{1}{\tan\theta}$$</div>
+        <div class="formula-condition">Valid when $\sin\theta \ne 0$, $\cos\theta \ne 0$, $\tan\theta \ne 0$ respectively.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Negative angle identities</div>
+        <div class="formula-expr">$$\sin(-\theta) = -\sin\theta \qquad \cos(-\theta) = \cos\theta \qquad \tan(-\theta) = -\tan\theta$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Complementary angle identities</div>
+        <div class="formula-expr">$$\sin(90^\circ-\theta) = \cos\theta \qquad \cos(90^\circ-\theta) = \sin\theta \qquad \tan(90^\circ-\theta) = \frac{1}{\tan\theta}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 240 240">
+            <line x1="10" y1="120" x2="230" y2="120" class="core" stroke-width="1.5"></line>
+            <line x1="120" y1="10" x2="120" y2="230" class="core" stroke-width="1.5"></line>
+            <line x1="120" y1="120" x2="200" y2="60" class="stroke" stroke-width="1.5"></line>
+            <line x1="120" y1="120" x2="40" y2="60" class="stroke" stroke-width="1.5"></line>
+            <line x1="120" y1="120" x2="40" y2="180" class="stroke" stroke-width="1.5"></line>
+            <line x1="120" y1="120" x2="200" y2="180" class="stroke" stroke-width="1.5"></line>
+            <text x="160" y="70">A</text>
+            <text x="146" y="86">(all)</text>
+            <text x="55" y="70">S</text>
+            <text x="40" y="86">(sin)</text>
+            <text x="45" y="168">T</text>
+            <text x="34" y="184">(tan)</text>
+            <text x="160" y="168">C</text>
+            <text x="150" y="184">(cos)</text>
+            <text x="108" y="22">90&deg;</text>
+            <text x="14" y="114">180&deg;</text>
+            <text x="98" y="228">270&deg;</text>
+            <text x="196" y="114">0&deg;/360&deg;</text>
+          </svg>
+        </div>
+        <div class="formula-label">General angle &mdash; the CAST rule</div>
+        <div class="formula-expr">$$\theta=\alpha \quad (\text{Q1}) \qquad \theta=180^\circ-\alpha \quad (\text{Q2}) \qquad \theta=180^\circ+\alpha \quad (\text{Q3}) \qquad \theta=360^\circ-\alpha \quad (\text{Q4})$$</div>
+        <div class="formula-condition">$\alpha$ is the basic (acute) angle. The letter in each quadrant names which ratio is <em>positive</em> there.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>Special angle values</h3>
+      <p>Derived from two right triangles: a $45$-$45$-$90$ triangle (legs $1,1$, hypotenuse $\sqrt2$) and a $30$-$60$-$90$
+      triangle (sides $1,\sqrt3,2$).</p>
+
+      <div style="display:flex; gap:24px; flex-wrap:wrap; justify-content:center; margin: 10px 0 18px;">
+        <div class="diagram" style="max-width:170px;">
+          <svg viewBox="0 0 160 140">
+            <polygon points="20,120 130,120 130,20" fill="none" class="stroke" stroke-width="2"></polygon>
+            <path d="M118,120 L118,108 L130,108" fill="none" class="core" stroke-width="1.5"></path>
+            <path d="M45,120 Q40,108 32,103" fill="none" class="core" stroke-width="1.5"></path>
+            <text x="68" y="134">1</text>
+            <text x="134" y="75">1</text>
+            <text x="58" y="82">&radic;2</text>
+            <text x="30" y="110">45&deg;</text>
+          </svg>
+        </div>
+        <div class="diagram" style="max-width:170px;">
+          <svg viewBox="0 0 160 140">
+            <polygon points="110,20 20,120 110,120" fill="none" class="stroke" stroke-width="2"></polygon>
+            <path d="M98,120 L98,108 L110,108" fill="none" class="core" stroke-width="1.5"></path>
+            <text x="55" y="134">1</text>
+            <text x="116" y="75">&radic;3</text>
+            <text x="52" y="63">2</text>
+            <text x="114" y="30">30&deg;</text>
+            <text x="28" y="112">60&deg;</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>$\theta$</th><th>$30^\circ$ or $\frac{\pi}{6}$</th><th>$45^\circ$ or $\frac{\pi}{4}$</th><th>$60^\circ$ or $\frac{\pi}{3}$</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>$\sin\theta$</td><td>$\frac{1}{2}$</td><td>$\frac{\sqrt2}{2}$</td><td>$\frac{\sqrt3}{2}$</td></tr>
+            <tr><td>$\cos\theta$</td><td>$\frac{\sqrt3}{2}$</td><td>$\frac{\sqrt2}{2}$</td><td>$\frac{1}{2}$</td></tr>
+            <tr><td>$\tan\theta$</td><td>$\frac{\sqrt3}{3}$</td><td>$1$</td><td>$\sqrt3$</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip-box">
+        <strong>Mnemonic:</strong> Going anticlockwise from quadrant 1 &mdash; <strong>A</strong>ll,
+        <strong>S</strong>tudents, <strong>T</strong>ake, <strong>C</strong>alculus &mdash; matches
+        <strong>A</strong>ll positive, <strong>S</strong>in positive, <strong>T</strong>an positive,
+        <strong>C</strong>os positive.
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Evaluate $\sin 150^\circ$ without a calculator.</p>
+        <p>$150^\circ$ is in Q2, so it's $180^\circ - \alpha$ with basic angle $\alpha = 30^\circ$.</p>
+        <p>In Q2, sine is positive (the "S" quadrant), so:</p>
+        <p>$$\sin 150^\circ = \sin 30^\circ = \frac{1}{2}$$</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

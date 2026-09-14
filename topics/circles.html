@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circles — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Geometry and Trigonometry</span>
+    <h1 class="topic-page-title">Circles</h1>
+
+    <p class="placeholder-note">
+      Further coordinate geometry: the equation of a circle in standard and general form. Builds on
+      <a href="coordinate-geometry.html">Coordinate Geometry</a> — distance and midpoint come up constantly here.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 220 210">
+            <line x1="20" y1="200" x2="210" y2="200" class="core" stroke-width="1.5"></line>
+            <line x1="20" y1="200" x2="20" y2="10" class="core" stroke-width="1.5"></line>
+            <circle cx="100" cy="115" r="85" fill="none" class="core" stroke-width="1.5"></circle>
+            <line x1="100" y1="115" x2="165" y2="115" class="core dash" stroke-width="1.5"></line>
+            <line x1="165" y1="115" x2="165" y2="60" class="core dash" stroke-width="1.5"></line>
+            <line x1="100" y1="115" x2="165" y2="60" class="stroke" stroke-width="2"></line>
+            <path d="M155,115 L155,105 L165,105" fill="none" class="core" stroke-width="1.5"></path>
+            <circle cx="100" cy="115" r="2.5" class="pt"></circle>
+            <circle cx="165" cy="60" r="2.5" class="pt"></circle>
+            <text x="8" y="212">O</text>
+            <text x="62" y="132">C(a, b)</text>
+            <text x="170" y="55">P(x, y)</text>
+            <text x="170" y="130">Q</text>
+            <text x="112" y="95">r units</text>
+          </svg>
+        </div>
+        <div class="formula-label">Equation of a circle (standard form)</div>
+        <div class="formula-expr">$$(x-a)^2+(y-b)^2 = r^2$$</div>
+        <div class="formula-condition">Centre $C(a,b)$, radius $r$. From Pythagoras on right triangle $CPQ$: $CQ^2+QP^2=CP^2$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Equation of a circle (general form)</div>
+        <div class="formula-expr">$$x^2+y^2+2gx+2fy+c = 0$$</div>
+        <div class="formula-condition">Centre $(-g,-f)$, radius $\sqrt{g^2+f^2-c}$.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>Standard form and general form are equivalent</h3>
+      <p>Expanding the standard form gives the general form:</p>
+      <div class="example-box">
+        <div class="example-label">Derivation</div>
+        <p>$$\begin{aligned} (x-a)^2+(y-b)^2 &= r^2 \\ x^2-2ax+a^2+y^2-2by+b^2 &= r^2 \\ x^2+y^2-2ax-2by+(a^2+b^2-r^2) &= 0 \end{aligned}$$</p>
+        <p>Matching this to $x^2+y^2+2gx+2fy+c=0$ gives $g=-a$, $f=-b$, $c=a^2+b^2-r^2$ — which is exactly where "centre $(-g,-f)$" and "radius $\sqrt{g^2+f^2-c}$" come from.</p>
+      </div>
+
+      <h3>Converting general form &rarr; standard form</h3>
+      <ul>
+        <li>Group the $x$ terms and $y$ terms, then complete the square on each: $x^2+2gx = (x+g)^2-g^2$ and $y^2+2fy=(y+f)^2-f^2$.</li>
+        <li>This directly reveals the centre $(-g,-f)$ and radius $\sqrt{g^2+f^2-c}$ without needing to memorise the formula.</li>
+      </ul>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> For the general form to represent a <em>real</em> circle, you need $g^2+f^2-c &gt; 0$
+        (a positive value under the square root). If $g^2+f^2-c=0$ the "circle" is just a single point, and if it's
+        negative there's no real circle at all.
+      </div>
+
+      <h3>Common exam pattern: circle from a diameter</h3>
+      <p>If $AB$ is a diameter of the circle, use <a href="coordinate-geometry.html">Coordinate Geometry</a> tools directly:</p>
+      <ul>
+        <li>Centre = midpoint of $AB$.</li>
+        <li>Radius = half the length of $AB$.</li>
+        <li>Alternatively: any point $P$ on the circle satisfies $\angle APB = 90^\circ$ (angle in a semicircle), so $m_{AP} \times m_{BP} = -1$.</li>
+      </ul>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

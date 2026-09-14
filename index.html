@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="index.html">O-Level A-Math Toolkit</a></p>
+        <p class="site-tagline">Formulas &amp; notes for every Additional Mathematics topic, in one place &mdash; by MathwithJo.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="search-wrap">
+      <input type="text" id="topic-search" placeholder="Search topics (e.g. differentiation, log)..." autocomplete="off" />
+    </div>
+
+    <div id="topic-grid-root">
+      <!-- filled in by assets/script.js from assets/topics-data.js -->
+    </div>
+
+    <p id="no-results">No topics match your search.</p>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+  <script src="assets/topics-data.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
