@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trigonometric Equations &amp; Identities — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Geometry and Trigonometry</span>
+    <h1 class="topic-page-title">Trigonometric Equations &amp; Identities</h1>
+
+    <p class="placeholder-note">
+      Principal values, the three basic identities, addition/double angle formulae, R-formulae, and &mdash; the
+      key skill &mdash; solving trigonometric equations by finding the basic angle first. See also
+      <a href="trigonometric-ratios.html">Trigonometric Ratios</a> for the CAST rule this all builds on.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-label">Principal values</div>
+        <div class="formula-expr">$$\begin{aligned} -90^\circ &\le \sin^{-1}x \le 90^\circ \\ 0^\circ &\le \cos^{-1}x \le 180^\circ \\ -90^\circ &\lt \tan^{-1}x \lt 90^\circ \end{aligned}$$</div>
+        <div class="formula-condition">For $\sin^{-1}x$ and $\cos^{-1}x$: $-1 \le x \le 1$. For $\tan^{-1}x$: $x$ is any real number. This is the single value your calculator gives you &mdash; not necessarily the answer(s) a question wants.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 220 180">
+            <line x1="40" y1="170" x2="200" y2="170" class="core" stroke-width="1.5"></line>
+            <line x1="40" y1="170" x2="40" y2="20" class="core" stroke-width="1.5"></line>
+            <line x1="40" y1="170" x2="130" y2="60" class="stroke" stroke-width="2"></line>
+            <line x1="130" y1="170" x2="130" y2="60" class="core dash" stroke-width="1.5"></line>
+            <path d="M70,170 Q66,158 58,152" fill="none" class="core" stroke-width="1.5"></path>
+            <circle cx="130" cy="60" r="2.5" class="pt"></circle>
+            <text x="136" y="58">P(x, y)</text>
+            <text x="136" y="118">y</text>
+            <text x="80" y="185">x</text>
+            <text x="72" y="108">r</text>
+            <text x="50" y="155">&theta;</text>
+          </svg>
+        </div>
+        <div class="formula-label">Basic trigonometric identities</div>
+        <div class="formula-expr">$$\begin{aligned} \sin^2\theta+\cos^2\theta&=1 \\ 1+\tan^2\theta&=\sec^2\theta \\ 1+\cot^2\theta&=\csc^2\theta \end{aligned}$$</div>
+        <div class="formula-condition">From $\sin\theta=\frac{y}{r}$, $\cos\theta=\frac{x}{r}$, $\tan\theta=\frac{y}{x}$ and Pythagoras' theorem $x^2+y^2=r^2$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Addition formulae</div>
+        <div class="formula-expr">$$\sin(A\pm B)=\sin A\cos B \pm \cos A\sin B$$ $$\cos(A\pm B)=\cos A\cos B \mp \sin A\sin B$$ $$\tan(A\pm B)=\dfrac{\tan A\pm\tan B}{1\mp\tan A\tan B}$$</div>
+        <div class="formula-condition">Provided in the exam formula list &mdash; no need to memorise, but know how to use them.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Double angle formulae</div>
+        <div class="formula-expr">$$\sin 2A=2\sin A\cos A$$ $$\begin{aligned} \cos 2A&=\cos^2A-\sin^2A \\ &=2\cos^2A-1 \\ &=1-2\sin^2A \end{aligned}$$ $$\tan 2A=\dfrac{2\tan A}{1-\tan^2A}$$</div>
+        <div class="formula-condition">Provided in the exam formula list. The three forms of $\cos 2A$ are equivalent &mdash; pick whichever matches the rest of the equation.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">R-formulae</div>
+        <div class="formula-expr">$$a\sin\theta \pm b\cos\theta = R\sin(\theta\pm\alpha)$$ $$a\cos\theta \pm b\sin\theta = R\cos(\theta\mp\alpha)$$</div>
+        <div class="formula-condition">Where $R=\sqrt{a^2+b^2}$ and $\tan\alpha=\dfrac{b}{a}$. <strong>Not</strong> provided in the exam &mdash; you're expected to derive $R$ and $\alpha$ each time (or know the method).</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">R-formulae &mdash; max/min values</div>
+        <div class="formula-expr">$$\text{Max} = R = \sqrt{a^2+b^2}$$ $$\text{Min} = -R = -\sqrt{a^2+b^2}$$</div>
+        <div class="formula-condition">For $a\sin\theta\pm b\cos\theta$: max when $\sin(\theta\pm\alpha)=1$, min when $\sin(\theta\pm\alpha)=-1$. For $a\cos\theta\pm b\sin\theta$: max when $\cos(\theta\mp\alpha)=1$, min when $\cos(\theta\mp\alpha)=-1$.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>Solving trigonometric equations &mdash; find the basic angle first</h3>
+      <p>A calculator's $\sin^{-1}$, $\cos^{-1}$, $\tan^{-1}$ only ever gives the <em>principal value</em> &mdash; but a question
+      usually wants every solution in a given range (e.g. $0^\circ$ to $360^\circ$). The fix is always the same:</p>
+      <ol>
+        <li>Rearrange the equation so a single trig ratio is isolated on one side (e.g. $\sin x = -\frac{1}{2}$).</li>
+        <li>Find the <strong>basic angle</strong> $\alpha$ &mdash; the acute angle satisfying the <em>positive</em> version of the
+        ratio: $\alpha = \sin^{-1}\left(\frac{1}{2}\right) = 30^\circ$. Ignore the sign at this stage.</li>
+        <li>Use the sign of the original ratio to decide <em>which quadrants</em> the real solutions are in (the CAST rule).</li>
+        <li>Write each solution as $180^\circ \pm \alpha$ or $360^\circ \pm \alpha$ as appropriate, then keep only the ones
+        inside the given range.</li>
+      </ol>
+
+      <div class="diagram" style="max-width:260px;">
+        <svg viewBox="0 0 260 260">
+          <line x1="10" y1="130" x2="250" y2="130" class="core" stroke-width="1.5"></line>
+          <line x1="130" y1="10" x2="130" y2="250" class="core" stroke-width="1.5"></line>
+          <line x1="130" y1="130" x2="217" y2="80" class="stroke" stroke-width="2"></line>
+          <line x1="130" y1="130" x2="43" y2="185" class="stroke" stroke-width="2"></line>
+          <line x1="130" y1="130" x2="217" y2="185" class="stroke" stroke-width="2"></line>
+          <path d="M155,130 Q155,123.3 151.7,117.5" fill="none" class="core" stroke-width="1.5"></path>
+          <path d="M105,130 Q105,137.2 108.9,143.4" fill="none" class="core" stroke-width="1.5"></path>
+          <path d="M155,130 Q155,137.2 151.1,143.4" fill="none" class="core" stroke-width="1.5"></path>
+          <text x="164" y="104">&alpha;=30&deg;</text>
+          <text x="52" y="152">&alpha;=30&deg;</text>
+          <text x="160" y="156">&alpha;=30&deg;</text>
+          <text x="10" y="204">x=210&deg;</text>
+          <text x="196" y="204">x=330&deg;</text>
+        </svg>
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">Worked example 1</div>
+        <p>Solve $2\sin x + 1 = 0$ for $0^\circ \le x \le 360^\circ$.</p>
+        <p>Isolate: $\sin x = -\dfrac{1}{2}$</p>
+        <p>Basic angle: $\alpha = \sin^{-1}\left(\dfrac{1}{2}\right) = 30^\circ$</p>
+        <p>$\sin x$ is <em>negative</em>, so (by CAST) $x$ lies in Q3 or Q4 &mdash; the two quadrants above show exactly this.</p>
+        <p>$$x = 180^\circ+30^\circ = 210^\circ$$ $$\text{or} \qquad x = 360^\circ-30^\circ = 330^\circ$$</p>
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">Worked example 2 &mdash; using an identity first</div>
+        <p>Solve $\cos 2\theta = 1-\sin\theta$ for $0^\circ \le \theta \le 360^\circ$.</p>
+        <p>Substitute $\cos 2\theta = 1-2\sin^2\theta$: $\quad 1-2\sin^2\theta = 1-\sin\theta$</p>
+        <p>$$2\sin^2\theta-\sin\theta=0$$ $$\Rightarrow\; \sin\theta(2\sin\theta-1)=0$$</p>
+        <p>So $\sin\theta=0$ or $\sin\theta=\dfrac{1}{2}$ &mdash; now apply the basic-angle method to each separately:</p>
+        <p>$\sin\theta=0 \Rightarrow \theta = 0^\circ, 180^\circ, 360^\circ$</p>
+        <p>$\sin\theta=\dfrac{1}{2} \Rightarrow \alpha=30^\circ$, positive in Q1 and Q2 $\Rightarrow \theta = 30^\circ, 150^\circ$</p>
+      </div>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> Reducing an equation with $\cos 2\theta$ or $\sin^2\theta$ terms to a single ratio (as in
+        Example 2) is just algebra &mdash; the moment you're left with something like "$\sin\theta = \ldots$", go straight
+        back to the basic-angle method. Don't try to shortcut it.
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

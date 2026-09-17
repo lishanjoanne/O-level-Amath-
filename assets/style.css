@@ -1,0 +1,470 @@
+/* ===== A-Math Toolkit — shared styles ===== */
+
+:root {
+  --navy: #0f2a4a;
+  --navy-dark: #0a1f38;
+  --blue: #1d5fb0;
+  --blue-light: #eaf3fc;
+  --blue-border: #cfe0f2;
+  --text: #1c2b3a;
+  --text-soft: #52697e;
+  --bg: #f6f9fc;
+  --card-bg: #ffffff;
+  --accent: #f5a623;
+  --radius: 10px;
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; }
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+  color: #fff;
+  padding: 28px 20px;
+}
+
+.site-header .inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.site-title a { color: #fff; }
+.site-title a:hover { text-decoration: none; opacity: 0.9; }
+
+.site-tagline {
+  color: #cfe0f2;
+  font-size: 0.95rem;
+  margin: 4px 0 0;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #cfe0f2;
+}
+.breadcrumb a { color: #fff; }
+
+/* ---------- Layout ---------- */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+/* ---------- Search ---------- */
+
+.search-wrap {
+  max-width: 480px;
+  margin: 24px auto 8px;
+}
+
+#topic-search {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid var(--blue-border);
+  border-radius: 999px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+#topic-search:focus { border-color: var(--blue); }
+
+/* ---------- Category sections ---------- */
+
+.category-block { margin-top: 40px; }
+
+.category-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue-border);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+/* ---------- Topic cards ---------- */
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.topic-card {
+  display: block;
+  background: var(--card-bg);
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.topic-card:hover {
+  box-shadow: 0 6px 18px rgba(15, 42, 74, 0.12);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.topic-card h3 {
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+
+.topic-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-soft);
+}
+
+.topic-card .status-badge {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.status-badge.ready { background: #e3f6e8; color: #1e7b3c; }
+.status-badge.pending { background: #fdecd2; color: #a86a12; }
+
+#no-results {
+  text-align: center;
+  color: var(--text-soft);
+  padding: 40px 0;
+  display: none;
+}
+
+/* ---------- Topic page ---------- */
+
+.topic-page-title {
+  color: var(--navy);
+  font-size: 1.8rem;
+  margin: 0 0 4px;
+}
+
+.topic-category-tag {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  color: var(--blue);
+  font-size: 1.2rem;
+  margin: 36px 0 16px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--blue-border);
+}
+
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.formula-card {
+  background: var(--card-bg);
+  border: 1px solid var(--blue-border);
+  border-left: 4px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+.formula-card .formula-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.formula-card .formula-expr {
+  font-size: 1.05rem;
+  color: var(--navy);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.formula-card .formula-expr::-webkit-scrollbar,
+.table-wrap::-webkit-scrollbar {
+  height: 6px;
+}
+
+.formula-card .formula-expr::-webkit-scrollbar-thumb,
+.table-wrap::-webkit-scrollbar-thumb {
+  background: var(--blue-border);
+  border-radius: 999px;
+}
+
+.formula-card .formula-condition {
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+/* ---------- Diagrams (usable inside any card: formula-card, property-card, notes-block) ---------- */
+
+.diagram {
+  max-width: 220px;
+  margin: 0 auto 10px;
+}
+
+.diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.diagram svg .core { stroke: var(--text-soft); }
+.diagram svg .stroke { stroke: var(--blue); }
+.diagram svg .dash { stroke-dasharray: 4, 3; }
+.diagram svg .pt { fill: var(--text); }
+.diagram svg text {
+  fill: var(--text);
+  font-size: 12px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.formula-card .diagram { margin-bottom: 12px; }
+
+.notes-block {
+  background: var(--card-bg);
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+
+.notes-block h3 {
+  color: var(--navy);
+  font-size: 1.02rem;
+  margin: 20px 0 8px;
+}
+
+.notes-block h3:first-child { margin-top: 0; }
+
+.notes-block ul, .notes-block ol {
+  padding-left: 22px;
+}
+
+.tip-box {
+  background: #fff8ea;
+  border: 1px solid #f3dfa8;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 18px 0;
+  font-size: 0.92rem;
+}
+
+.tip-box strong { color: #9a6a0c; }
+
+.example-box {
+  background: var(--bg);
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 14px 0;
+  font-size: 0.92rem;
+}
+
+.example-box p {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.example-box p::-webkit-scrollbar { height: 6px; }
+.example-box p::-webkit-scrollbar-thumb { background: var(--blue-border); border-radius: 999px; }
+
+.example-box .example-label {
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.example-box ol {
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+
+.example-box p { margin: 4px 0; }
+
+/* ---------- Data tables (discriminant conditions, sign tables, etc.) ---------- */
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 14px 0;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.data-table th, .data-table td {
+  border: 1px solid var(--blue-border);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table th {
+  background: var(--blue-light);
+  color: var(--navy);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.data-table td { background: var(--card-bg); }
+
+.placeholder-note {
+  background: var(--blue-light);
+  border: 1px dashed var(--blue-border);
+  border-radius: var(--radius);
+  padding: 18px;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.placeholder-note a { font-weight: 600; }
+
+/* ---------- Property cards (diagram + description), used by geometry topics ---------- */
+
+.subject-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.subject-badge.emath { background: var(--blue-light); color: var(--blue); }
+.subject-badge.amath { background: #e6f4ec; color: #2f7d5c; }
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.property-card {
+  background: var(--card-bg);
+  border: 1px solid var(--blue-border);
+  border-radius: var(--radius);
+  padding: 16px 18px 18px;
+}
+
+.property-card .diagram {
+  max-width: 220px;
+  margin: 0 auto 10px;
+}
+
+.property-card .diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.property-card .diagram svg .core { stroke: var(--text-soft); }
+.property-card .diagram svg .dash { stroke-dasharray: 4, 3; }
+.property-card .diagram svg .pt { fill: var(--text); }
+.property-card .diagram svg text {
+  fill: var(--text);
+  font-size: 13px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.property-card.emath .diagram svg .stroke { stroke: var(--blue); }
+.property-card.amath .diagram svg .stroke { stroke: #2f7d5c; }
+
+.property-card h3 {
+  color: var(--navy);
+  font-size: 1rem;
+  margin: 0 0 8px;
+}
+
+.property-card p {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.property-card .proof-phrase {
+  display: block;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.82rem;
+  background: var(--bg);
+  border: 1px solid var(--blue-border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: var(--text-soft);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  text-align: center;
+  padding: 24px 20px;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 480px) {
+  .site-title { font-size: 1.25rem; }
+  .topic-page-title { font-size: 1.5rem; }
+  .container { padding-left: 14px; padding-right: 14px; }
+  .formula-card { padding: 12px 14px; }
+  .notes-block { padding: 16px; }
+  .example-box, .tip-box { padding: 12px 14px; }
+  .formula-card .formula-expr { font-size: 0.95rem; }
+  .data-table { font-size: 0.8rem; }
+  .data-table th, .data-table td { padding: 6px 8px; }
+}

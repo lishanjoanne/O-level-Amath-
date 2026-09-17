@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quadratic Functions — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Algebra</span>
+    <h1 class="topic-page-title">Quadratic Functions</h1>
+
+    <p class="placeholder-note">
+      Covers completing the square, the nature of roots via the discriminant, and solving quadratic
+      inequalities properly by sketching. Send over more worked examples and they'll be added in.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-label">Completing the square (monic)</div>
+        <div class="formula-expr">$$x^2 + px = \left(x + \frac{p}{2}\right)^2 - \left(\frac{p}{2}\right)^2$$</div>
+        <div class="formula-condition">Add and subtract $\left(\frac{p}{2}\right)^2$ — half the coefficient of $x$, squared.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Completing the square — worked example ($a \ne 1$)</div>
+        <div class="formula-expr">$$\begin{aligned} 2x^2+12x+5 &= 2(x^2+6x)+5 \\ &= 2\big[(x+3)^2-9\big]+5 \\ &= 2(x+3)^2-13 \end{aligned}$$</div>
+        <div class="formula-condition">Factor out the 2 first, then complete the square inside the bracket.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Three equivalent forms</div>
+        <div class="formula-expr">$$\begin{aligned} y &= ax^2+bx+c \\ &= a(x-p)(x-q) \\ &= a(x-h)^2+k \end{aligned}$$</div>
+        <div class="formula-condition">Valid when: $a \ne 0$. Pick the form that gives you what the question asks for.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Turning point (vertex form)</div>
+        <div class="formula-expr">$$y = a(x-h)^2+k$$</div>
+        <div class="formula-condition">Turning point is $(h,k)$: minimum if $a \gt 0$, maximum if $a \lt 0$. Line of symmetry: $x=h$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">x-intercepts (factorised form)</div>
+        <div class="formula-expr">$$y = a(x-p)(x-q)$$</div>
+        <div class="formula-condition">$x$-intercepts are $p$ and $q$. Line of symmetry: $x = \dfrac{p+q}{2}$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Always positive / always negative</div>
+        <div class="formula-expr">$$\begin{aligned} ax^2+bx+c \gt 0 &\text{ for all } x \\ \iff a \gt 0 &\text{ and } b^2-4ac \lt 0 \end{aligned}$$</div>
+        <div class="formula-condition">Swap both inequality signs (to $a \lt 0$ and stays $b^2-4ac \lt 0$) for "always negative".</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>Sketching a quadratic graph $y=ax^2+bx+c$</h3>
+      <ol>
+        <li>Determine whether the graph is $\cup$-shaped ($a \gt 0$) or $\cap$-shaped ($a \lt 0$).</li>
+        <li>Express the function as $y=a(x-p)(x-q)$ to get the $x$-intercepts, or $y=a(x-h)^2+k$ to get the turning point.</li>
+        <li>Substitute $x=0$ into the equation to find the $y$-intercept.</li>
+      </ol>
+
+      <h3>Nature of roots — the discriminant</h3>
+      <p>For $ax^2+bx+c=0$, the roots are the $x$-coordinates where the curve $y=ax^2+bx+c$ crosses the $x$-axis. Their nature depends on the discriminant $b^2-4ac$:</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Discriminant</th><th>Nature of roots</th><th>x-axis intersections</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>$b^2-4ac \gt 0$</td><td>2 real and distinct roots</td><td>2</td></tr>
+            <tr><td>$b^2-4ac=0$</td><td>2 real and equal (repeated) roots</td><td>1 (curve touches the axis)</td></tr>
+            <tr><td>$b^2-4ac \ge 0$</td><td>2 real roots</td><td>1 or 2</td></tr>
+            <tr><td>$b^2-4ac \lt 0$</td><td>No real roots</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip-box">
+        <strong>Same test, another use:</strong> a line and a curve are solved as simultaneous equations, which reduces to one
+        quadratic. The same discriminant test then tells you the number of intersection points: $b^2-4ac \gt 0$ &rarr; line
+        crosses the curve at 2 points; $=0$ &rarr; the line is a <em>tangent</em> (1 point); $\lt 0$ &rarr; the line
+        doesn't meet the curve at all.
+      </div>
+
+      <h3>Solving quadratic inequalities</h3>
+      <ol>
+        <li>Make one side of the inequality zero (rearrange everything onto the LHS).</li>
+        <li>Factorise the quadratic expression.</li>
+        <li>Sketch the graph and label the $x$-intercepts $p$ and $q$ (where $p \lt q$).</li>
+        <li>Read the solution off the sketch, based on the inequality sign.</li>
+      </ol>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> Always make sure the RHS of the inequality is zero <em>before</em> factorising the
+        expression on the LHS — factorising too early against a nonzero RHS is a common careless mistake.
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Solve $x^2 - x \gt 12$.</p>
+        <p>Step 1 — make RHS zero: $x^2 - x - 12 \gt 0$</p>
+        <p>Step 2 — factorise: $(x-4)(x+3) \gt 0$</p>
+        <p>Step 3 — sketch: a $\cup$-shaped curve ($a=1 \gt 0$) crossing the $x$-axis at $x=-3$ and $x=4$.</p>
+        <p>Step 4 — read off (want $\gt 0$, i.e. above the axis): $$x \lt -3 \text{ or } x \gt 4$$</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

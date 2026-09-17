@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trigonometric Graphs — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Geometry and Trigonometry</span>
+    <h1 class="topic-page-title">Trigonometric Graphs</h1>
+
+    <p class="placeholder-note">
+      The graphs of $\sin x$, $\cos x$, $\tan x$, plus the scaled/stretched family $a\sin bx$, $a\cos bx$,
+      $a\tan bx$. See also <a href="trigonometric-ratios.html">Trigonometric Ratios</a>.
+    </p>
+
+    <h2 class="section-heading">Key Formulas &mdash; $y=\sin x$, $y=\cos x$, $y=\tan x$ for $0^\circ \le x \le 360^\circ$</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 240 160">
+            <line x1="20" y1="90" x2="220" y2="90" class="core" stroke-width="1.5"></line>
+            <line x1="20" y1="20" x2="20" y2="150" class="core" stroke-width="1.5"></line>
+            <path d="M20,90 C38,60 54,50 72,50 C88,50 102,60 120,90 C138,118 154,130 170,130 C186,130 202,120 220,90" fill="none" class="stroke" stroke-width="2"></path>
+            <line x1="72" y1="86" x2="72" y2="94" class="core" stroke-width="1"></line>
+            <line x1="120" y1="86" x2="120" y2="94" class="core" stroke-width="1"></line>
+            <line x1="170" y1="86" x2="170" y2="94" class="core" stroke-width="1"></line>
+            <line x1="220" y1="86" x2="220" y2="94" class="core" stroke-width="1"></line>
+            <text x="6" y="53">1</text>
+            <text x="2" y="134">&minus;1</text>
+            <text x="62" y="105">90&deg;</text>
+            <text x="108" y="105">180&deg;</text>
+            <text x="156" y="105">270&deg;</text>
+            <text x="202" y="105">360&deg;</text>
+          </svg>
+        </div>
+        <div class="formula-label">$y = \sin x$</div>
+        <div class="formula-condition">
+          $\sin x=0$ at $x=0^\circ,180^\circ,360^\circ$; $\sin x=1$ at $x=90^\circ$; $\sin x=-1$ at $x=270^\circ$.<br>
+          Period $=360^\circ$, amplitude $=1$, asymptotes: none.
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 240 160">
+            <line x1="20" y1="90" x2="220" y2="90" class="core" stroke-width="1.5"></line>
+            <line x1="20" y1="20" x2="20" y2="150" class="core" stroke-width="1.5"></line>
+            <path d="M20,50 C38,50 54,60 72,90 C90,120 102,130 120,130 C138,130 152,120 170,90 C188,60 202,50 220,50" fill="none" class="stroke" stroke-width="2"></path>
+            <line x1="72" y1="86" x2="72" y2="94" class="core" stroke-width="1"></line>
+            <line x1="120" y1="86" x2="120" y2="94" class="core" stroke-width="1"></line>
+            <line x1="170" y1="86" x2="170" y2="94" class="core" stroke-width="1"></line>
+            <line x1="220" y1="86" x2="220" y2="94" class="core" stroke-width="1"></line>
+            <text x="6" y="53">1</text>
+            <text x="2" y="134">&minus;1</text>
+            <text x="62" y="105">90&deg;</text>
+            <text x="108" y="105">180&deg;</text>
+            <text x="156" y="105">270&deg;</text>
+            <text x="202" y="105">360&deg;</text>
+          </svg>
+        </div>
+        <div class="formula-label">$y = \cos x$</div>
+        <div class="formula-condition">
+          $\cos x=0$ at $x=90^\circ,270^\circ$; $\cos x=1$ at $x=0^\circ,360^\circ$; $\cos x=-1$ at $x=180^\circ$.<br>
+          Period $=360^\circ$, amplitude $=1$, asymptotes: none.
+        </div>
+      </div>
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 240 160">
+            <line x1="20" y1="90" x2="220" y2="90" class="core" stroke-width="1.5"></line>
+            <line x1="20" y1="20" x2="20" y2="150" class="core" stroke-width="1.5"></line>
+            <line x1="72" y1="15" x2="72" y2="150" class="core dash" stroke-width="1.5"></line>
+            <line x1="170" y1="15" x2="170" y2="150" class="core dash" stroke-width="1.5"></line>
+            <path d="M20,105 C45,95 62,60 71,17" fill="none" class="stroke" stroke-width="2"></path>
+            <path d="M73,163 C90,140 108,95 120,90 C132,85 155,45 169,17" fill="none" class="stroke" stroke-width="2"></path>
+            <path d="M171,163 C190,140 208,100 220,90" fill="none" class="stroke" stroke-width="2"></path>
+            <text x="62" y="105">90&deg;</text>
+            <text x="108" y="105">180&deg;</text>
+            <text x="152" y="105">270&deg;</text>
+            <text x="202" y="105">360&deg;</text>
+          </svg>
+        </div>
+        <div class="formula-label">$y = \tan x$</div>
+        <div class="formula-condition">
+          $\tan x=0$ at $x=0^\circ,180^\circ,360^\circ$.<br>
+          Period $=180^\circ$, amplitude: undefined, asymptotes: $x=90^\circ, x=270^\circ$.
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Key Formulas &mdash; $y=a\sin bx$, $y=a\cos bx$, $y=a\tan bx$ ($a>0$)</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 240 160">
+            <line x1="20" y1="90" x2="220" y2="90" class="core" stroke-width="1.5"></line>
+            <line x1="20" y1="20" x2="20" y2="150" class="core" stroke-width="1.5"></line>
+            <path d="M20,90 C38,60 54,50 72,50 C88,50 102,60 120,90 C138,118 154,130 170,130 C186,130 202,120 220,90" fill="none" class="stroke" stroke-width="2"></path>
+            <line x1="20" y1="50" x2="72" y2="50" class="core dash" stroke-width="1"></line>
+            <line x1="45" y1="20" x2="45" y2="90" class="core dash" stroke-width="1"></line>
+            <text x="4" y="46">a</text>
+            <text x="30" y="35">period = 360&deg;/b</text>
+            <text x="76" y="70">amplitude = a</text>
+          </svg>
+        </div>
+        <div class="formula-label">$y = a\sin bx$</div>
+        <div class="formula-expr">$$\text{Range: } -a \le a\sin bx \le a$$</div>
+        <div class="formula-condition">Period $=\dfrac{360^\circ}{b}$, amplitude $=|a|$, asymptotes: none.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">$y = a\cos bx$</div>
+        <div class="formula-expr">$$\text{Range: } -a \le a\cos bx \le a$$</div>
+        <div class="formula-condition">Period $=\dfrac{360^\circ}{b}$, amplitude $=|a|$, asymptotes: none. Same shape as $a\sin bx$, shifted to start at a peak.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="diagram">
+          <svg viewBox="0 0 240 160">
+            <line x1="20" y1="90" x2="220" y2="90" class="core" stroke-width="1.5"></line>
+            <line x1="20" y1="20" x2="20" y2="150" class="core" stroke-width="1.5"></line>
+            <line x1="72" y1="15" x2="72" y2="150" class="core dash" stroke-width="1.5"></line>
+            <line x1="170" y1="15" x2="170" y2="150" class="core dash" stroke-width="1.5"></line>
+            <path d="M20,105 C45,95 62,60 71,17" fill="none" class="stroke" stroke-width="2"></path>
+            <path d="M73,163 C90,140 108,95 120,90 C132,85 155,45 169,17" fill="none" class="stroke" stroke-width="2"></path>
+            <path d="M171,163 C190,140 208,100 220,90" fill="none" class="stroke" stroke-width="2"></path>
+            <text x="55" y="30">period = 180&deg;/b</text>
+            <text x="58" y="105">90&deg;/b</text>
+            <text x="150" y="105">270&deg;/b</text>
+          </svg>
+        </div>
+        <div class="formula-label">$y = a\tan bx$</div>
+        <div class="formula-expr">$$\text{Range: any real number}$$</div>
+        <div class="formula-condition">Period $=\dfrac{180^\circ}{b}$, amplitude: undefined, asymptotes: $x=\dfrac{90^\circ}{b}, x=\dfrac{270^\circ}{b}$.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>Reading off period, amplitude and asymptotes</h3>
+      <ul>
+        <li>$a$ stretches the graph vertically &mdash; it scales the amplitude, but never shifts the graph sideways.</li>
+        <li>$b$ compresses the graph horizontally &mdash; a bigger $b$ means a shorter period (more cycles packed into the same width).</li>
+        <li>For $\tan$, the asymptotes scale the same way the period does: divide the basic $90^\circ$ and $270^\circ$ positions by $b$.</li>
+      </ul>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

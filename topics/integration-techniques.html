@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Integration Techniques — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Calculus</span>
+    <h1 class="topic-page-title">Integration Techniques</h1>
+
+    <p class="placeholder-note">
+      Covers all standard syllabus formulas plus the rule-by-rule "steps" from your own notes.
+      Send over worked examples or common student mistakes and they'll be added in.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-label">Power rule</div>
+        <div class="formula-expr">$$\int x^n \, dx = \frac{x^{n+1}}{n+1} + c$$</div>
+        <div class="formula-condition">Valid when: $n \ne -1$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Linear substitution (power rule)</div>
+        <div class="formula-expr">$$\int (ax+b)^n \, dx = \frac{(ax+b)^{n+1}}{a(n+1)} + c$$</div>
+        <div class="formula-condition">Steps: increase the power by 1 &rarr; divide by the new power &rarr; divide again by $a$ (the derivative of $ax+b$).</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Reciprocal / ln</div>
+        <div class="formula-expr">$$\begin{aligned} \int \frac{1}{x} \, dx &= \ln|x| + c \\ \int \frac{1}{ax+b} \, dx &= \frac{1}{a}\ln|ax+b| + c \end{aligned}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">General f'(x)/f(x) form</div>
+        <div class="formula-expr">$$\int \frac{f'(x)}{f(x)} \, dx = \ln|f(x)| + c$$</div>
+        <div class="formula-condition">Spot this whenever the numerator is (a multiple of) the derivative of the denominator.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Exponential</div>
+        <div class="formula-expr">$$\begin{aligned} \int e^x \, dx &= e^x + c \\ \int e^{ax+b} \, dx &= \frac{1}{a}e^{ax+b} + c \end{aligned}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Trigonometric</div>
+        <div class="formula-expr">$$\begin{aligned} \int \sin x \, dx &= -\cos x + c \\ \int \cos x \, dx &= \sin x + c \\ \int \sec^2 x \, dx &= \tan x + c \end{aligned}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Trig with linear argument</div>
+        <div class="formula-expr">$$\begin{aligned} \int \sin(ax+b)\,dx &= -\frac{1}{a}\cos(ax+b) + c \\ \int \cos(ax+b)\,dx &= \frac{1}{a}\sin(ax+b) + c \\ \int \sec^2(ax+b)\,dx &= \frac{1}{a}\tan(ax+b) + c \end{aligned}$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Definite integral</div>
+        <div class="formula-expr">$$\int_a^b f(x)\,dx = F(b) - F(a)$$</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Area under a curve</div>
+        <div class="formula-expr">$$A = \int_a^b y \, dx$$</div>
+        <div class="formula-condition">If the curve dips below the x-axis on part of $[a,b]$, integrate each part separately and take the absolute value.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+      <h3>General strategy</h3>
+      <ul>
+        <li>Integration reverses differentiation — if unsure of a result, differentiate it back to check.</li>
+        <li>Always add "$+c$" for indefinite integrals — a frequently dropped mark.</li>
+        <li>Rewrite awkward expressions (surds, negative indices, fractions) as powers of $x$ before integrating.</li>
+      </ul>
+
+      <h3>Trig identities before integrating</h3>
+      <ul>
+        <li>There's no direct formula to integrate $\sin^2 x$ or $\cos^2 x$ — use the double-angle identities to rewrite them first: $\sin^2 x = \frac{1-\cos 2x}{2}$, $\cos^2 x = \frac{1+\cos 2x}{2}$.</li>
+        <li>Example: $\int \sin^2 x \, dx = \int \frac{1-\cos 2x}{2}\,dx = \frac{x}{2} - \frac{\sin 2x}{4} + c$.</li>
+        <li>Watch for $\sin^2 x + \cos^2 x = 1$ and $\tan^2 x = \sec^2 x - 1$ too — both can simplify an integrand before you integrate.</li>
+      </ul>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> Don't forget the $\frac{1}{a}$ factor when integrating a function of $(ax+b)$ —
+        it's easy to integrate as if $a = 1$.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>
