@@ -24,6 +24,13 @@ const TOPICS = [
   },
   {
     category: "Algebra",
+    title: "Equations & Inequalities",
+    file: "topics/equations-inequalities.html",
+    blurb: "Simultaneous equations (linear & quadratic) by substitution, and using the discriminant for line/curve intersections.",
+    status: "ready"
+  },
+  {
+    category: "Algebra",
     title: "Logarithms & Exponentials",
     file: "topics/logarithms-exponentials.html",
     blurb: "Log laws, change of base, solving exponential equations.",

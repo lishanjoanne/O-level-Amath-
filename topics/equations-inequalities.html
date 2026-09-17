@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equations &amp; Inequalities — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Algebra</span>
+    <h1 class="topic-page-title">Equations &amp; Inequalities</h1>
+
+    <p class="placeholder-note">
+      Covers solving simultaneous equations (one linear, one quadratic) by substitution, and using the
+      discriminant to determine how a line and a curve relate. For sketch-based quadratic inequalities,
+      see the <a href="quadratic-functions.html">Quadratic Functions</a> page.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-label">Discriminant of $ax^2+bx+c=0$</div>
+        <div class="formula-expr">$$b^2-4ac$$</div>
+        <div class="formula-condition">Valid when: $a \ne 0$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Line &amp; curve — condition to intersect</div>
+        <div class="formula-expr">$$b^2-4ac \gt 0 \implies \text{2 distinct intersection points}$$</div>
+        <div class="formula-condition">Substitute the line into the curve's equation first to get this quadratic.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Line &amp; curve — condition to be a tangent</div>
+        <div class="formula-expr">$$b^2-4ac = 0 \implies \text{line is a tangent (1 point)}$$</div>
+        <div class="formula-condition">The line touches the curve but does not cross it.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Line &amp; curve — condition not to meet</div>
+        <div class="formula-expr">$$b^2-4ac \lt 0 \implies \text{no intersection}$$</div>
+        <div class="formula-condition">The resulting quadratic has no real roots.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>Solving simultaneous equations (one linear, one quadratic)</h3>
+      <ol>
+        <li>Make $x$ or $y$ the subject of the linear equation.</li>
+        <li>Substitute it into the quadratic equation.</li>
+        <li>Simplify into the form $ax^2+bx+c=0$ and solve for the first variable.</li>
+        <li>Substitute each value back into the linear equation to find the matching second variable.</li>
+      </ol>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> Always substitute into the linear equation (not the quadratic one) to
+        find the second variable — it's faster and avoids picking up extra, invalid roots.
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Solve $y = x + 1$ and $y = x^2 - x - 1$ simultaneously.</p>
+        <p>Step 1 — substitute: $x + 1 = x^2 - x - 1$</p>
+        <p>Step 2 — rearrange: $x^2 - 2x - 2 = 0$</p>
+        <p>Step 3 — solve (quadratic formula): $$x = \frac{2 \pm \sqrt{4+8}}{2} = 1 \pm \sqrt{3}$$</p>
+        <p>Step 4 — back into $y=x+1$: $$y = 2 \pm \sqrt{3}$$</p>
+      </div>
+
+      <h3>Line and curve: intersecting, tangent, or missing</h3>
+      <p>
+        Substituting a line's equation into a curve's equation reduces the system to a single quadratic.
+        The discriminant of that quadratic then tells you how the line and curve relate — this is the same
+        discriminant test as for the number of roots, just applied after the substitution step.
+      </p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Discriminant</th><th>Meaning</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>$b^2-4ac \gt 0$</td><td>Line crosses the curve at 2 distinct points</td></tr>
+            <tr><td>$b^2-4ac = 0$</td><td>Line is a tangent to the curve (1 point)</td></tr>
+            <tr><td>$b^2-4ac \lt 0$</td><td>Line does not meet the curve</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Find the value(s) of $k$ for which the line $y = 2x + k$ is a tangent to the curve $y = x^2 + 3x + 5$.</p>
+        <p>Step 1 — substitute: $2x + k = x^2 + 3x + 5$</p>
+        <p>Step 2 — rearrange: $x^2 + x + (5-k) = 0$</p>
+        <p>Step 3 — tangent means equal roots, so discriminant $=0$: $$1^2 - 4(1)(5-k) = 0$$</p>
+        <p>Step 4 — solve: $$1 - 20 + 4k = 0 \implies k = \frac{19}{4}$$</p>
+      </div>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> Watch out for which variable you eliminate. If the linear equation is
+        given as $x = \ldots$, substitute for $x$; don't force it into $y = \ldots$ form first if that
+        introduces fractions you don't need.
+      </div>
+
+      <h3>Quadratic inequalities</h3>
+      <p>
+        Quadratic inequalities (e.g. $x^2 - x \gt 12$) are solved by sketching the graph — see the
+        <a href="quadratic-functions.html">Quadratic Functions</a> page for the full method and worked
+        example.
+      </p>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

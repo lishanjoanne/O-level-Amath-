@@ -116,7 +116,7 @@ Check the new/changed page at normal width and at a mobile width (~375px) before
 
 **Algebra**
 - [x] Quadratic Functions
-- [ ] Equations & Inequalities
+- [x] Equations & Inequalities
 - [x] Surds
 - [ ] Polynomials & Partial Fractions
 - [ ] Binomial Expansions
