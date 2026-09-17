@@ -38,6 +38,13 @@ const TOPICS = [
   },
   {
     category: "Algebra",
+    title: "Binomial Expansions",
+    file: "topics/binomial-expansions.html",
+    blurb: "Binomial Theorem, the general term, finding a specific term or term independent of x, estimating powers of numbers.",
+    status: "ready"
+  },
+  {
+    category: "Algebra",
     title: "Logarithms & Exponentials",
     file: "topics/logarithms-exponentials.html",
     blurb: "Log laws, change of base, solving exponential equations.",

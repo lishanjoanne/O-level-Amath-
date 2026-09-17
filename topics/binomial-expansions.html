@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binomial Expansions — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Algebra</span>
+    <h1 class="topic-page-title">Binomial Expansions</h1>
+
+    <p class="placeholder-note">
+      The Binomial Theorem, the general term $T_{r+1}$, and using it to find a specific term, the term
+      independent of $x$, and to estimate powers of numbers.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-label">Binomial Theorem</div>
+        <div class="formula-expr">$$(a+b)^n = a^n + \binom{n}{1}a^{n-1}b + \binom{n}{2}a^{n-2}b^2 + \ldots + \binom{n}{r}a^{n-r}b^r + \ldots + b^n$$</div>
+        <div class="formula-condition">Powers of $a$ decrease from $n$ to $0$; powers of $b$ increase from $0$ to $n$. Total: $(n+1)$ terms.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">General term</div>
+        <div class="formula-expr">$$T_{r+1} = \binom{n}{r}a^{n-r}b^r$$</div>
+        <div class="formula-condition">Valid when: $r$ is an integer, $0 \le r \le n$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Binomial coefficient</div>
+        <div class="formula-expr">$$\binom{n}{r} = \frac{n\times(n-1)\times\ldots\times(n-r+1)}{r!} = \frac{n!}{r!(n-r)!}$$</div>
+        <div class="formula-condition">$n! = n\times(n-1)\times(n-2)\times\ldots\times 3\times 2\times 1$, and by definition $0!=1$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Special values</div>
+        <div class="formula-expr">$$\binom{n}{0} = 1 \qquad \binom{n}{n} = 1$$</div>
+        <div class="formula-condition">The first and last terms of any expansion are always $a^n$ and $b^n$.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>Finding a specific term or coefficient</h3>
+      <p>Use the general term $T_{r+1} = \binom{n}{r}a^{n-r}b^r$ &mdash; substitute the value of $r$ that gives the power of $x$ you want, rather than expanding everything.</p>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Find the coefficient of $x^3$ in the expansion of $(2+x)^7$.</p>
+        <p>General term: $$T_{r+1} = \binom{7}{r}2^{7-r}x^r$$</p>
+        <p>Want $x^3$, so $r=3$: $$T_4 = \binom{7}{3}2^4x^3 = 35 \times 16 \, x^3 = 560x^3$$</p>
+        <p>Coefficient of $x^3$ is $560$.</p>
+      </div>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> $T_{r+1}$ has subscript $r+1$, not $r$ &mdash; a common slip is reporting the $(r+1)$-th term as if it were the $r$-th.
+      </div>
+
+      <h3>Term independent of $x$</h3>
+      <p>The term independent of $x$ (the constant term) is the one where the power of $x$ works out to $0$. Set the exponent of $x$ in $T_{r+1}$ to $0$ and solve for $r$.</p>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Find the term independent of $x$ in $\left(x^2+\dfrac{1}{x}\right)^6$.</p>
+        <p>General term: $$T_{r+1} = \binom{6}{r}\left(x^2\right)^{6-r}\left(\frac{1}{x}\right)^r = \binom{6}{r}x^{12-3r}$$</p>
+        <p>Independent of $x$ means $12-3r=0 \implies r=4$.</p>
+        <p>Term: $$T_5 = \binom{6}{4} = 15$$</p>
+      </div>
+
+      <h3>Estimating powers of numbers</h3>
+      <p>Write the number as $(1+b)^n$ with $b$ small, expand using the Binomial Theorem, and drop the higher-power terms (they get tiny fast) to estimate without a calculator.</p>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Estimate $(1.02)^6$ to 3 decimal places.</p>
+        <p>Write $1.02 = 1+0.02$, so expand $(1+0.02)^6$: $$1 + \binom{6}{1}(0.02) + \binom{6}{2}(0.02)^2 + \ldots$$</p>
+        <p>Keeping terms up to $(0.02)^2$: $$1 + 6(0.02) + 15(0.0004) = 1 + 0.12 + 0.006 = 1.126$$</p>
+        <p>So $(1.02)^6 \approx 1.126$ (later terms are too small to affect 3 d.p.).</p>
+      </div>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> The question usually tells you how many terms to keep, or how many decimal places to give &mdash; that tells you when it's safe to stop.
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

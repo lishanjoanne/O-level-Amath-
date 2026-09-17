@@ -119,7 +119,7 @@ Check the new/changed page at normal width and at a mobile width (~375px) before
 - [x] Equations & Inequalities
 - [x] Surds
 - [x] Polynomials & Partial Fractions
-- [ ] Binomial Expansions
+- [x] Binomial Expansions
 - [x] Logarithms & Exponentials
 
 **Geometry and Trigonometry**
