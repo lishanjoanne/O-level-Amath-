@@ -65,6 +65,13 @@ const TOPICS = [
     status: "ready"
   },
   {
+    category: "Calculus",
+    title: "Kinematics",
+    file: "topics/kinematics.html",
+    blurb: "Displacement, velocity & acceleration via differentiation/integration; direction, rest, max/min, distance vs. displacement.",
+    status: "ready"
+  },
+  {
     category: "Geometry and Trigonometry",
     title: "Coordinate Geometry",
     file: "topics/coordinate-geometry.html",

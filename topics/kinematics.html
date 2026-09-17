@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinematics — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Calculus</span>
+    <h1 class="topic-page-title">Kinematics</h1>
+
+    <p class="placeholder-note">
+      Displacement, velocity and acceleration linked by differentiation &amp; integration &mdash;
+      direction of motion, rest, max/min displacement &amp; velocity, and distance vs. displacement.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-label">Velocity</div>
+        <div class="formula-expr">$$v = \frac{ds}{dt}$$</div>
+        <div class="formula-condition">Rate of change of displacement $s$ with respect to time $t$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Acceleration</div>
+        <div class="formula-expr">$$a = \frac{dv}{dt} = \frac{d^2s}{dt^2}$$</div>
+        <div class="formula-condition">Rate of change of velocity &mdash; equivalently, the 2nd derivative of $s$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Velocity from acceleration</div>
+        <div class="formula-expr">$$v = \int a \, dt$$</div>
+        <div class="formula-condition">Use a given initial condition (e.g. $v$ at $t=0$) to find the constant of integration.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Displacement from velocity</div>
+        <div class="formula-expr">$$s = \int v \, dt$$</div>
+        <div class="formula-condition">Use a given initial condition (e.g. $s$ at $t=0$) to find the constant of integration.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>The differentiate / integrate chain</h3>
+      <p><strong>Differentiate:</strong> $s \rightarrow v \rightarrow a$ &nbsp; (each arrow is $\frac{d}{dt}$)</p>
+      <p><strong>Integrate:</strong> $a \rightarrow v \rightarrow s$ &nbsp; (each arrow is $\int \cdot \, dt$)</p>
+      <p>Every integration introduces a constant &mdash; always use the given initial condition to pin it down.</p>
+
+      <h3>Direction of motion and rest</h3>
+      <ul>
+        <li>Particle is <strong>at rest</strong> when $v=0$.</li>
+        <li>Particle moves in the <strong>positive direction</strong> when $v \gt 0$, and the <strong>negative direction</strong> when $v \lt 0$.</li>
+        <li>Particle's speed is <strong>increasing</strong> when $v$ and $a$ have the same sign, and <strong>decreasing</strong> when they have opposite signs.</li>
+      </ul>
+
+      <h3>Maximum / minimum displacement and velocity</h3>
+      <ul>
+        <li><strong>Max/min displacement:</strong> occurs when $v=0$. Check $a$ at that instant &mdash; $a \lt 0$ gives max $s$, $a \gt 0$ gives min $s$.</li>
+        <li><strong>Max/min velocity:</strong> occurs when $a=0$. Check $\dfrac{da}{dt}$ at that instant &mdash; negative gives max $v$, positive gives min $v$.</li>
+      </ul>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>A particle moves such that $s = t^3-6t^2+9t$ for $t \ge 0$. Find when it is at rest, and determine if each position is a maximum or minimum displacement.</p>
+        <p>$$v = \frac{ds}{dt} = 3t^2-12t+9 = 3(t-1)(t-3) \qquad a = \frac{dv}{dt} = 6t-12$$</p>
+        <p>At rest: $v=0 \implies t=1$ or $t=3$.</p>
+        <p>At $t=1$: $a = 6(1)-12=-6 \lt 0$ &rarr; maximum displacement, $s=1-6+9=4$.</p>
+        <p>At $t=3$: $a = 6(3)-12=6 \gt 0$ &rarr; minimum displacement, $s=27-54+27=0$.</p>
+      </div>
+
+      <h3>Distance travelled vs. displacement</h3>
+      <p>
+        Displacement is the net change in position; distance travelled adds up every bit of movement,
+        regardless of direction. They differ whenever the particle reverses direction (i.e. $v=0$)
+        during the time interval.
+      </p>
+
+      <div class="tip-box">
+        <strong>Method:</strong> find every time the particle is at rest within the interval, split the
+        interval at those points, compute $s$ at the start and end of each piece, then sum up
+        $|\Delta s|$ for each piece.
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Using $s = t^3-6t^2+9t$ from the previous example, find the total distance travelled from $t=0$ to $t=4$.</p>
+        <p>Rest points inside $[0,4]$: $t=1$ and $t=3$ (found above).</p>
+        <p>$$s(0)=0 \qquad s(1)=4 \qquad s(3)=0 \qquad s(4)=64-96+36=4$$</p>
+        <p>Distance travelled: $$|4-0| + |0-4| + |4-0| = 4+4+4 = 12$$</p>
+        <p>Compare to displacement, which is just $s(4)-s(0) = 4$.</p>
+      </div>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> If the question asks for "distance travelled", always check for rest
+        points inside the interval first &mdash; using $|s(\text{end})-s(\text{start})|$ directly only
+        works if the particle never changes direction.
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

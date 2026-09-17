@@ -134,7 +134,7 @@ Check the new/changed page at normal width and at a mobile width (~375px) before
 **Calculus**
 - [x] Differentiation Techniques
 - [x] Integration Techniques
-- [ ] Kinematics (displacement/velocity/acceleration via differentiation & integration)
+- [x] Kinematics (displacement/velocity/acceleration via differentiation & integration)
 
 Officially Differentiation, Integration and Kinematics are all one syllabus topic (C1) — kept as
 separate pages here since that's easier to navigate for revision.
