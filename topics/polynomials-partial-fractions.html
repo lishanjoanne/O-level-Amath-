@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polynomials &amp; Partial Fractions — O-Level A-Math Toolkit</title>
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });">
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="inner">
+      <div>
+        <p class="site-title"><a href="../index.html">O-Level A-Math Toolkit</a></p>
+        <p class="breadcrumb"><a href="../index.html">&larr; All topics</a></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="topic-category-tag">Algebra</span>
+    <h1 class="topic-page-title">Polynomials &amp; Partial Fractions</h1>
+
+    <p class="placeholder-note">
+      Identities, the Remainder &amp; Factor Theorems, factorising/solving cubics, and splitting
+      algebraic fractions into partial fractions.
+    </p>
+
+    <h2 class="section-heading">Key Formulas</h2>
+    <div class="formula-grid">
+
+      <div class="formula-card">
+        <div class="formula-label">Division Algorithm</div>
+        <div class="formula-expr">$$\text{dividend} = \text{divisor} \times \text{quotient} + \text{remainder}$$</div>
+        <div class="formula-condition">The remainder's degree is always less than the divisor's.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Remainder Theorem</div>
+        <div class="formula-expr">$$f(x) \div (ax+b) \implies \text{remainder} = f\!\left(-\tfrac{b}{a}\right)$$</div>
+        <div class="formula-condition">Special case $x+b$: remainder $= f(-b)$.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Factor Theorem</div>
+        <div class="formula-expr">$$ax+b \text{ is a factor of } f(x) \iff f\!\left(-\tfrac{b}{a}\right) = 0$$</div>
+        <div class="formula-condition">Use this to hunt for a polynomial's linear factors.</div>
+      </div>
+
+      <div class="formula-card">
+        <div class="formula-label">Sum &amp; difference of cubes</div>
+        <div class="formula-expr">$$\begin{aligned} a^3+b^3 &= (a+b)(a^2-ab+b^2) \\ a^3-b^3 &= (a-b)(a^2+ab+b^2) \end{aligned}$$</div>
+        <div class="formula-condition">Note the sign flips: opposite sign outside, always $+b^2$ inside.</div>
+      </div>
+
+    </div>
+
+    <h2 class="section-heading">Notes</h2>
+    <div class="notes-block">
+
+      <h3>Identities</h3>
+      <p>$P(x) \equiv Q(x)$ means they're equal for <em>every</em> value of $x$ &mdash; not just solving for one $x$. To find unknown coefficients, either:</p>
+      <ul>
+        <li><strong>Substitute suitable values of $x$</strong> &mdash; fastest when a value makes most terms vanish.</li>
+        <li><strong>Compare coefficients of like powers of $x$</strong> &mdash; more reliable when you need every unknown.</li>
+      </ul>
+
+      <h3>Factorising &amp; solving a cubic</h3>
+      <ol>
+        <li>Use the Factor Theorem (try factors of the constant term) to find one linear factor, e.g. $x-p$.</li>
+        <li>Write $f(x) = (x-p)(ax^2+bx+c)$.</li>
+        <li>Find $a$, $b$, $c$ by comparing coefficients (or substituting values).</li>
+        <li>Factorise $ax^2+bx+c$ further if possible.</li>
+        <li>To <em>solve</em> $f(x)=0$: set each factor to zero.</li>
+      </ol>
+
+      <div class="example-box">
+        <div class="example-label">Worked example</div>
+        <p>Factorise and solve $x^3-6x^2+11x-6=0$.</p>
+        <p>Step 1 &mdash; try $x=1$: $1-6+11-6=0$, so $(x-1)$ is a factor.</p>
+        <p>Step 2 &mdash; divide: $$x^3-6x^2+11x-6 = (x-1)(x^2-5x+6)$$</p>
+        <p>Step 3 &mdash; factorise the quadratic: $$(x-1)(x-2)(x-3) = 0$$</p>
+        <p>Step 4 &mdash; roots: $$x=1, \ 2, \ 3$$</p>
+      </div>
+
+      <div class="tip-box">
+        <strong>Exam tip:</strong> Only try values of $x$ that divide the constant term exactly &mdash; it narrows down the guessing fast.
+      </div>
+
+      <h3>Partial fractions</h3>
+      <p>$\dfrac{P(x)}{Q(x)}$ is <strong>proper</strong> if $\deg P \lt \deg Q$, and <strong>improper</strong> if $\deg P \ge \deg Q$.</p>
+
+      <div class="tip-box">
+        <strong>Improper fraction?</strong> Long-divide first to get a polynomial $+$ a proper fraction, then apply the steps below to the proper fraction only.
+      </div>
+
+      <ol>
+        <li>Factorise the denominator $Q(x)$ completely.</li>
+        <li>Match each factor to a case below.</li>
+        <li>Solve for the unknowns by substituting suitable values of $x$ and/or comparing coefficients.</li>
+      </ol>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>Denominator has</th><th>Partial fraction form</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Linear factor $ax+b$</td><td>$$\dfrac{A}{ax+b}$$</td></tr>
+            <tr><td>Repeated linear factor $(ax+b)^2$</td><td>$$\dfrac{A}{ax+b} + \dfrac{B}{(ax+b)^2}$$</td></tr>
+            <tr><td>Quadratic factor $x^2+c^2$ (can't factorise)</td><td>$$\dfrac{Ax+B}{x^2+c^2}$$</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">Worked example — linear factors</div>
+        <p>Split $\dfrac{x-10}{(x+4)(x-3)}$.</p>
+        <p>Set up: $$\frac{x-10}{(x+4)(x-3)} = \frac{A}{x+4} + \frac{B}{x-3}$$</p>
+        <p>Multiply through by $(x+4)(x-3)$: $x-10 = A(x-3) + B(x+4)$</p>
+        <p>Let $x=3$: $-7=7B \implies B=-1$. &nbsp; Let $x=-4$: $-14=-7A \implies A=2$.</p>
+        <p>Answer: $$\frac{x-10}{(x+4)(x-3)} = \frac{2}{x+4} - \frac{1}{x-3}$$</p>
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">Worked example — repeated linear factor</div>
+        <p>Split $\dfrac{2x+1}{(2x-5)^2}$.</p>
+        <p>Set up: $$\frac{2x+1}{(2x-5)^2} = \frac{A}{2x-5} + \frac{B}{(2x-5)^2}$$</p>
+        <p>Multiply through: $2x+1 = A(2x-5) + B$</p>
+        <p>Let $x=\tfrac{5}{2}$: $6=B$. &nbsp; Compare $x$-coefficients: $2=2A \implies A=1$.</p>
+        <p>Answer: $$\frac{2x+1}{(2x-5)^2} = \frac{1}{2x-5} + \frac{6}{(2x-5)^2}$$</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    MathwithJo &mdash; Built for O-Level A-Math revision. &middot; <a href="https://wa.me/6591559478">WhatsApp: +65 9155 9478</a>
+  </footer>
+
+</body>
+</html>

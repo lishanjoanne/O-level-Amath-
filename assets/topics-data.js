@@ -31,6 +31,13 @@ const TOPICS = [
   },
   {
     category: "Algebra",
+    title: "Polynomials & Partial Fractions",
+    file: "topics/polynomials-partial-fractions.html",
+    blurb: "Identities, Remainder & Factor Theorems, factorising/solving cubics, splitting into partial fractions.",
+    status: "ready"
+  },
+  {
+    category: "Algebra",
     title: "Logarithms & Exponentials",
     file: "topics/logarithms-exponentials.html",
     blurb: "Log laws, change of base, solving exponential equations.",

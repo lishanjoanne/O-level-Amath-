@@ -118,7 +118,7 @@ Check the new/changed page at normal width and at a mobile width (~375px) before
 - [x] Quadratic Functions
 - [x] Equations & Inequalities
 - [x] Surds
-- [ ] Polynomials & Partial Fractions
+- [x] Polynomials & Partial Fractions
 - [ ] Binomial Expansions
 - [x] Logarithms & Exponentials
 
